@@ -1,0 +1,83 @@
+{
+  "name": "bookmarket",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "@octokit/rest": "^20.0.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "concurrently": "^8.2.2",
+    "electron-context-menu": "^3.6.1",
+    "electron-is-dev": "^3.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
+    "react-scripts": "5.0.1",
+    "uglify-js-export": "^3.17.4",
+    "web-vitals": "^2.1.4"
+  },
+  "homepage": "./",
+  "scripts": {
+    "build": "react-scripts build",
+    "dev": "BROWSER=none react-scripts start",
+    "electron": "NODE_ENV=development electron main.js --inspect",
+    "nodemon": "NODE_ENV=development nodemon --exec electron main.js",
+    "start": "concurrently -k \"npm:dev\" \"npm:electron\"",
+    "start-nodemon": "concurrently -k \"npm:dev\" \"npm:nodemon\"",
+    "build-electron": "mkdir build/src && cp -r electron/. build/electron && cp -r src/shared/. build/src/shared",
+    "package": "npm run build && electron-builder build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions"
+    ],
+    "production": [
+      "last 2 chrome versions"
+    ]
+  },
+  "build": {
+    "extends": null,
+    "productName": "Bookmarket",
+    "appId": "com.bookmarket.app",
+    "files": [
+      "build/**/*",
+      "electron/**/*",
+      "main.js",
+      "package.json"
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "copyright": "Copyright © 2024 Kryptonite",
+    "directories": {
+      "buildResources": "resources",
+      "output": "release"
+    }
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^28.2.3",
+    "electron-builder": "^24.9.1",
+    "nodemon": "^3.0.3"
+  }
+}

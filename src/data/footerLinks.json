@@ -1,0 +1,50 @@
+[
+    {
+        "class": "links-dev",
+        "links": [
+            { "url": "/", 
+            "text": "Installation" },
+            { "url": "/", 
+            "text": "frontend-collection" },
+            { "url": "/", 
+            "text": "Devkit" },
+            { "url": "/", 
+            "text": "Timeline" },
+            { "url": "/", 
+            "text": "Automation" }
+        ]
+    },
+    {
+        "class": "links-gp",
+        "links": [
+            { "url": "/", 
+            "text": "GP Links" },
+            { "url": "/", 
+            "text": "GP Links" },
+            { "url": "/", 
+            "text": "GP Links" }
+        ]
+    },
+    {
+        "class": "links-pm",
+        "links": [
+            { "url": "/", 
+            "text": "PM Links" },
+            { "url": "/", 
+            "text": "PM Links" },
+            { "url": "/", 
+            "text": "PM Links" }
+        ]
+    },
+    {
+        "class": "links-qa",
+        "links": [
+            { "url": "/", 
+            "text": "QA Links" },
+            { "url": "/", 
+            "text": "QA Links" },
+            { "url": "/", 
+            "text": "QA Links" }
+        ]
+    }
+]

@@ -1,0 +1,144 @@
+/* accordion */
+.accordion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 46px;
+}
+
+@media only screen and (max-width: 734px) {
+    .accordion {
+        overflow-x: hidden;
+    }
+}
+
+.accordion::-webkit-scrollbar {
+    display: none;
+}
+
+.accordion-item {
+    width: 100%;
+    border-bottom: 1px solid var(--dark-3);
+}
+
+@media only screen and (max-width: 734px) {
+    .accordion-item {
+        width: calc(100% - 30px);
+        padding: 0 15px;
+    }
+}
+
+.accordion-item:last-child {
+    margin-bottom: 30px;
+}
+
+.accordion-item:last-child.active {
+    border-bottom: none !important;
+}
+
+.accordion-title {
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: transparent;
+    font-weight: 500;
+    letter-spacing: 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 734px) {
+    .accordion-title {
+        font-size: 20px;
+    }
+}
+
+.accordion-title .badge {
+    font-size: 10px;
+    font-weight: 500;
+    padding: 3px 5px;
+    border-radius: 4px;
+    background-color: var(--dark-3);
+    margin-right: 9px;
+    vertical-align: 10px;
+}
+
+.accordion-title-text {
+    letter-spacing: 0.3px;
+    transition: color 350ms ease; 
+}
+
+.accordion-title .accordion-icon svg {
+    width: 20px;
+    color: var(--grey);
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+@media only screen and (max-width: 734px) {
+    .accordion-title .accordion-icon svg {
+        width: 15px;
+        padding-left: 20px;
+    }
+}
+
+.accordion-item .accordion-title:hover .accordion-icon svg {
+    color: var(--accent-color);
+}
+
+.accordion-title .accordion-icon svg[aria-expanded="true"] {
+    transform: rotateZ(180deg);
+}
+
+@media only screen and (max-width: 734px) {
+    .accordion-title .accordion-icon svg[aria-expanded="true"] {
+        transform: translateX(20px) rotateZ(180deg);
+    }
+}
+
+.accordion-content {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+}
+
+.accordion-content.active {
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.accordion-links {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.accordion-link {
+    flex-basis: 50%;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+@media only screen and (max-width: 734px) {
+    .accordion-link {
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+}
+
+.accordion-link a {
+    cursor: pointer;
+}
+
+.accordion-link a:hover {
+    text-decoration: underline;
+}

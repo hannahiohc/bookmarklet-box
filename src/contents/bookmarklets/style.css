@@ -1,0 +1,67 @@
+section.bookmarklets {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    position: relative;
+}
+
+.bookmarklet-buttons {
+    width: calc(100% - 270px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 55px;
+    position: fixed;
+    background: linear-gradient(180deg, rgba(21,21,21,1) 0%, rgba(21,21,21,1) 70%, rgba(21,21,21,0) 95%);
+    z-index: 10;
+}
+
+.bookmarklet-buttons button {
+    padding: 5px 17px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    background-color: var(--dark-2);
+    font-weight: 500;
+}
+
+/* tabmenu */
+section.bookmarklets #tabMenu {
+    display: flex;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 734px) {
+    section.bookmarklets #tabMenu {
+        padding: 0 15px;
+    }
+}
+
+section.bookmarklets #tabMenu button:hover {
+    background-color: var(--dark-3);
+}
+
+section.bookmarklets #tabMenu button.active {
+    background-color: var(--accent-color);
+}
+
+@media only screen and (max-width: 734px) {
+    section.bookmarklets #tabMenu button {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        font-size: 12px;
+    }
+}
+
+.download-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 734px) {
+    .download-buttons {
+        display: none;
+    }
+}

@@ -1,0 +1,101 @@
+:root {
+  --dark-1: #151515;
+  --dark-2: #242426;
+  --dark-3: #39393B;
+  --dark-4: #86868B;
+  --accent-color: #974dff;
+  --accent-hover: rgba(151, 77, 255, 0.15);
+  --light-accent: #974dff;
+  --white: #FFFFFF;
+  --grey: #AAAAAA;
+}
+
+body {
+  height: 100vh;
+  word-break: keep-all;
+  background-color: var(--dark-1);
+  color: var(--white);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.layout {
+  display: grid;
+  position: relative;
+  height: 100%;
+  grid-template-areas: 'sidebar content';
+  grid-template-columns: 220px 1fr;
+  box-sizing: border-box;
+}
+
+.window-top-bar {
+  width: 100%;
+  height: 35px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  user-select: none;
+  -webkit-app-region: drag;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  padding: 0 25px 50px;
+  box-sizing: border-box;
+  overflow-y: auto; 
+  position: relative;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  transition: background-color 350ms ease; 
+}
+
+.no-transition * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+ul {
+  list-style: none;
+}

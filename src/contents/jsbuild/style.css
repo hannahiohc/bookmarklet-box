@@ -1,0 +1,94 @@
+section.jsbuild {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 734px) {
+    section.jsbuild {
+        width: calc(100% - 30px);
+        padding: 0 15px;
+    }
+}
+
+/* buttons */
+section.jsbuild .buttons {
+    width: calc(100% - 270px);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 13px;
+    height: 55px;
+    position: fixed;
+    background: linear-gradient(180deg, rgba(21,21,21,1) 0%, rgba(21,21,21,1) 70%, rgba(21,21,21,0) 95%);
+    z-index: 10;
+}
+
+section.jsbuild button {
+    padding: 5px 17px;
+    font-size: 13px;
+    background-color: var(--dark-2);
+}
+
+section.jsbuild button.copy.success {
+    background-color: var(--accent-color);
+}
+
+section.jsbuild button:hover {
+    background-color: var(--dark-3);
+}
+
+
+@media only screen and (max-width: 734px) {
+    section.jsbuild button {
+        padding: 5px 20px 6px 20px;
+        font-size: 13px;
+    }
+}
+
+/* textarea */
+section.jsbuild textarea {
+    width: calc(100% - 30px);
+    background-color: var(--dark-2);
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    color: var(--white);
+    font-size: 14px;
+    padding: 10px 15px;
+    box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.15);
+    transition: transform 350ms ease, box-shadow 350ms ease; 
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+section.jsbuild textarea:hover {
+    transform: translateY(-1.5px);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.15);
+}
+
+section.jsbuild textarea:focus {
+    outline: none;
+}
+
+section.jsbuild .your-js {
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+
+section.jsbuild textarea.your-js {
+    height: 150px;
+}
+
+section.jsbuild textarea.minified-js {
+    height: 450px;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 734px) {
+    section.jsbuild textarea.your-js {
+        height: 100px;
+    }
+    
+    section.jsbuild textarea.minified-js {
+        height: 300px;
+    }
+}

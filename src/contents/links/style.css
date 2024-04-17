@@ -1,0 +1,63 @@
+section.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    letter-spacing: 0.3px;
+}
+
+.links .links-buttons {
+    width: calc(100% - 270px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 55px;
+    position: fixed;
+    background: linear-gradient(180deg, rgba(21,21,21,1) 0%, rgba(21,21,21,1) 70%, rgba(21,21,21,0) 95%);
+    z-index: 10;
+}
+
+.links .links-buttons #tabMenu {
+    display: flex;
+    gap: 10px;
+}
+
+.links .links-buttons button {
+    padding: 5px 17px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    background-color: var(--dark-2);
+    font-weight: 500;
+}
+
+.links .links-buttons button:hover {
+    background-color: var(--dark-3);
+}
+
+.links .links-buttons button.active {
+    background-color: var(--accent-color);
+}
+
+@media only screen and (max-width: 734px) {
+    .links .links-buttons {
+        margin-right: 15px;
+        margin-bottom: 5px;
+    }
+
+    .links .links-buttons button {
+        font-size: 12px;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        font-size: 12px;
+    }
+
+    .expand-all {
+        display: none;
+    }
+}

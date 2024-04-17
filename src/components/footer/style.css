@@ -1,0 +1,104 @@
+section.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 17px;
+    color: var(--grey);
+    gap: 5px;
+    margin-bottom: 30px;
+    bottom: 10px;
+}
+
+@media only screen and (max-width: 734px) {
+    section.footer {
+        padding: 0 15px;
+        margin-top: 10px;
+        position: relative;
+    }
+}
+
+/* links */
+section.footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+section.footer ul.links li {
+    position: relative;
+    margin-inline-end: 10px;
+    display: inline-block;
+}
+
+section.footer ul.links li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 10px;
+    pointer-events: none;
+}
+
+section.footer ul.links li::after {
+    content: "";
+    position: absolute;
+    height: 11px;
+    width: 1px;
+    background-color: var(--grey);
+    margin-top: 3px;
+}
+
+section.footer ul.links a {
+    color: var(--white);
+    padding-inline-end: 10px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+section.footer a:hover {
+    text-decoration: underline;
+}
+
+section.footer ul.links li:last-child {
+    margin-inline-end: 0;
+}
+
+section.footer ul.links li:last-child:after {
+    display: none;
+}
+
+section.footer ul.links li:last-child a {
+    padding-inline-end: 0;
+}
+
+@media only screen and (max-width: 734px) {
+    section.footer {
+        width: calc(100% - 15px);
+        font-size: 12px;
+    }
+
+    section.footer ul.links li {
+        margin-inline-end: 7.5px;
+    }
+
+    section.footer ul.links li::before {
+        inset-inline-end: 7.5px;
+    }
+
+    section.footer ul.links a {
+        padding-inline-end: 7.5px;
+    }
+}
+
+/* tab */
+ul.links.links-dev, ul.links.links-gp, ul.links.links-pm, ul.links.links-qa {
+    display: none;
+}
+
+ul.links.links-dev.active, ul.links.links-gp.active, ul.links.links-pm.active, ul.links.links-qa.active {
+    display: block;
+}

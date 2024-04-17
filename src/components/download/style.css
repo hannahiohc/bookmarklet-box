@@ -1,0 +1,15 @@
+.download-buttons button {
+    display: flex;
+}
+
+.download-buttons button:hover {
+    background-color: var(--dark-3);
+}
+
+.download-buttons button svg {
+    width: 15px;
+}
+
+.download-buttons button span {
+    margin-left: 5px;
+}
